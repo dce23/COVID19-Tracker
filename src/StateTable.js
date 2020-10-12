@@ -2,13 +2,13 @@ import React from "react";
 import numeral from "numeral";
 import "./Table.css";
 
-function CountryTable({ countries }) {
+function StateTable({ states }) {
   return (
     <div className="table">
-      {/* Go thru all of the countries and map thru them and return a jsx table */}
-      {countries.map(({ country, cases }) => (
+      {/* Go thru all of the states and map thru them and return a jsx table */}
+      {states.map(({ state, cases }) => (
         <tr>
-          <td>{country}</td>
+          <td>{state}</td>
           <td>
             <strong>{numeral(cases).format("0,0")}</strong>
           </td>
@@ -18,4 +18,4 @@ function CountryTable({ countries }) {
   );
 }
 
-export default CountryTable;
+export default StateTable;
